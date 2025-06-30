@@ -1,73 +1,37 @@
-# Welcome to your Lovable project
+# GreenMandi Project
 
-## Project info
+## 📘 Project Overview
 
-**URL**: https://lovable.dev/projects/d741bbc4-431a-4344-a09b-ed79a617b32a
+GreenMandi is a modern web application built with cutting-edge technologies to streamline agricultural product listings and management. It is developed using:
 
-## How can I edit this code?
+- ⚡ Vite
+- 🟦 TypeScript
+- ⚛️ React
+- 🎨 Tailwind CSS
+- 💻 shadcn/ui
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠️ How to Run the Project Locally
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d741bbc4-431a-4344-a09b-ed79a617b32a) and start prompting.
+To get started with local development, follow the steps below:
 
-Changes made via Lovable will be committed automatically to this repo.
+### ✅ Prerequisites
 
-**Use your preferred IDE**
+- Install [Node.js](https://nodejs.org/) (recommended: use [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- Install `npm` (comes with Node.js)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🚀 Setup Steps
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Step 1: Clone the repository
+git clone https://github.com/amxn-dot/greenmandi.git
 
-Follow these steps:
+# Step 2: Navigate into the project directory
+cd greenmandi
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 3: Install all required dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d741bbc4-431a-4344-a09b-ed79a617b32a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
