@@ -1,0 +1,218 @@
+
+@layer base {
+  :root {
+    --background: 43 100% 98%;
+    --foreground: 20 29% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 29% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 29% 8%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 120 10% 96%;
+    --muted-foreground: 20 15% 35%;
+
+    --accent: 16 24% 29%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 20 15% 85%;
+    --input: 20 15% 88%;
+    --ring: 142 76% 36%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 29% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 20 29% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 20 29% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 20 20% 20%;
+    --muted-foreground: 20 10% 75%;
+
+    --accent: 16 24% 29%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 20 15% 30%;
+    --input: 20 15% 30%;
+    --ring: 142 76% 36%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-green-50/80 via-white to-orange-50/60 text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: contain;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground font-bold tracking-tight;
+    font-weight: 800;
+    color: hsl(var(--foreground)) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply text-foreground leading-relaxed;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Strong text visibility */
+  button, a, span, div, label, li {
+    @apply text-foreground;
+    color: hsl(var(--foreground)) !important;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Enhanced muted text with better contrast */
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground)) !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Strong contrast for interactive elements */
+  button:not(.btn-primary):not(.btn-secondary) {
+    @apply text-foreground transition-all duration-300;
+    color: hsl(var(--foreground)) !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Enhanced input placeholder visibility */
+  input::placeholder, textarea::placeholder {
+    color: hsl(var(--muted-foreground)) !important;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+
+  /* Strong link visibility */
+  a {
+    color: hsl(var(--foreground)) !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    color: hsl(var(--primary)) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  /* Enhanced form inputs with maximum visibility */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  textarea,
+  select {
+    @apply text-base rounded-2xl border-border bg-input text-foreground focus:bg-card transition-all duration-300 shadow-sm focus:shadow-lg;
+    color: hsl(var(--foreground)) !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Enhanced focus styles for maximum accessibility */
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-4 ring-ring/50 ring-offset-2 ring-offset-background transition-all duration-300;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  /* Force text visibility across all elements */
+  div, span, p, h1, h2, h3, h4, h5, h6, li, a, button, label, input, textarea, select {
+    color: hsl(var(--foreground)) !important;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Override any transparent or low-contrast text */
+  * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ensure high contrast on all interactive elements */
+  button, a, [role="button"] {
+    color: hsl(var(--foreground)) !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Special handling for white text elements */
+  .text-white {
+    color: white !important;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
